@@ -3,231 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lux - Enriched Transactions</title>
+    <title>Lux - Revolutionizing Everyday Transactions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000;
-            color: #fff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            /* TODO: Add your background image here */
+            background-image: url('path/to/your/background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
-        .container {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        .light-orange {
+            color: #ffc3a0;
         }
-        header {
-            background-color: #1a202c;
-            text-align: center;
-            padding: 1rem;
-        }
-        h1 {
-            font-size: 2.25rem;
-            font-weight: bold;
-            background-image: linear-gradient(to right, #f97316, #9333ea);
+        .gradient-text {
+            background-image: linear-gradient(to right, #ddd6fe, #a78bfa);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-        }
-        nav {
-            background-color: #2d3748;
-            padding: 0.5rem;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 0.5rem;
-        }
-        .tab-button {
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: color 0.3s;
-        }
-        .tab-button:hover, .tab-button.active {
-            color: #f97316;
-        }
-        main {
-            flex-grow: 1;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .tab-content {
-            display: none;
-        }
-        .tab-content.active {
-            display: block;
-        }
-        h2 {
-            font-size: 1.875rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-            background-image: linear-gradient(to right, #f97316, #9333ea);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        p {
-            font-size: 1.125rem;
-            margin-bottom: 1.5rem;
-        }
-        .screenshots {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 2rem;
-        }
-        .app-screenshot {
-            max-width: 250px;
-            height: auto;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        .border-purple {
-            border: 2px solid #9333ea;
-        }
-        .border-orange {
-            border: 2px solid #f97316;
-        }
-        form {
-            max-width: 28rem;
-            margin: 0 auto;
-        }
-        input[type="email"], button[type="submit"] {
-            width: 100%;
-            padding: 0.5rem 0.75rem;
-            margin-bottom: 1rem;
-            border-radius: 0.25rem;
-        }
-        input[type="email"] {
-            background-color: #2d3748;
-            border: 1px solid #4a5568;
-            color: white;
-        }
-        button[type="submit"] {
-            background-image: linear-gradient(to right, #f97316, #9333ea);
-            color: white;
-            border: none;
-            cursor: pointer;
-            transition: opacity 0.3s;
-        }
-        button[type="submit"]:hover {
-            opacity: 0.9;
-        }
-        footer {
-            background-color: #1a202c;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
-        @media (max-width: 768px) {
-            .screenshots {
-                flex-direction: column;
-                align-items: center;
-            }
-            .app-screenshot {
-                max-width: 80%;
-                margin-bottom: 1rem;
-            }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1>Lux</h1>
+<body class="bg-black bg-opacity-80 text-white">
+    <div class="min-h-screen flex flex-col">
+        <header class="bg-gray-900 bg-opacity-80 text-white text-center py-4">
+            <h1 class="text-4xl font-light flex items-center justify-center">
+                Lux
+                <svg class="w-8 h-8 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 10V3L4 14H11V21L20 10H13Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </h1>
         </header>
-        <nav>
-            <ul>
-                <li><button class="tab-button active" data-tab="about">About</button></li>
-                <li><button class="tab-button" data-tab="signup">Sign Up for Waitlist</button></li>
-                <li><button class="tab-button" data-tab="contact">Contact</button></li>
+        <nav class="bg-gray-800 bg-opacity-80 py-2">
+            <ul class="flex justify-center space-x-4">
+                <li><button class="text-white hover:text-gray-200 transition duration-300" onclick="showTab('about')">About</button></li>
+                <li><button class="text-gray-400 hover:text-gray-200 transition duration-300" onclick="showTab('signup')">Sign Up</button></li>
+                <li><button class="text-gray-400 hover:text-gray-200 transition duration-300" onclick="showTab('contact')">Contact</button></li>
             </ul>
         </nav>
-        <main>
-            <div id="about" class="tab-content active">
-                <h2>What are enriched transactions?</h2>
-                <p>
-                    Enriched transactions enable customers to get cashback directly from their favorite coffee shops, restaurants, etc. 
-                    Lux supports and empowers small businesses and gives customers a better transacting experience.
+        <main class="flex-grow container mx-auto px-4 py-8">
+            <div id="about" class="space-y-6">
+                <h2 class="text-3xl font-light mb-4 gradient-text">Welcome to Lux: Revolutionizing Everyday Transactions</h2>
+                <p class="mb-4"><span class="font-semibold text-violet-200">Lux</span> is more than just an app—it's a movement towards supporting local businesses and enhancing your everyday transactions. Here's how Lux makes a difference for everyone:</p>
+                
+                <!-- For Customers Section -->
+                <div class="bg-gray-800 bg-opacity-80 rounded-lg p-6 border border-gray-700">
+                    <h3 class="text-2xl font-light text-violet-200 mb-4">For Customers:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><span class="light-orange font-semibold">Support Your Community:</span> Use Lux to shop and eat locally, directly supporting small businesses and boosting your local economy.</li>
+                        <li><span class="light-orange font-semibold">Earn Cash Back & More:</span> Get instant cash back on your purchases, with the option to receive rewards in Bitcoin or stablecoins.</li>
+                        <li><span class="light-orange font-semibold">Privacy First:</span> Enjoy transactions with complete privacy. We use secure, anonymous Nostr keys, so your location and personal data remain private.</li>
+                        <li><span class="light-orange font-semibold">No Credit Card Fees:</span> By using the Bitcoin Lightning Network, we eliminate traditional credit card fees, allowing more of your rewards to stay in your pocket.</li>
+                        <li><span class="light-orange font-semibold">Engage & Reward:</span> Create your unique profile, interact with merchants, leave reviews, and follow your favorite local spots. Stream money directly to businesses or friends as you please.</li>
+                        <li><span class="light-orange font-semibold">Exclusive Offers:</span> Discover high-cashback deals and special promotions from local merchants, highlighted for you in the app.</li>
+                    </ul>
+                </div>
+
+                <!-- For Merchants Section -->
+                <div class="bg-gray-800 bg-opacity-80 rounded-lg p-6 border border-gray-700">
+                    <h3 class="text-2xl font-light text-violet-200 mb-4">For Merchants:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><span class="light-orange font-semibold">Boost Your Business:</span> Attract more customers by offering cashback rewards and exclusive incentives directly through the app.</li>
+                        <li><span class="light-orange font-semibold">Save on Fees:</span> Instead of paying traditional credit card or bank fees, use that money to offer cashback directly to your customers. This not only eliminates middlemen but also acts as a powerful marketing tool, enhancing your visibility in the app. For instance, if you'd typically pay a 3% fee to banks, you can instead offer that 3% as cashback, driving more traffic and sales to your business.</li>
+                        <li><span class="light-orange font-semibold">Flexible Promotions:</span> Tailor your rewards based on your business needs. Offer higher cashback on slower days to boost demand or adjust promotions based on peak times. This flexibility lets you respond dynamically to your business environment.</li>
+                        <li><span class="light-orange font-semibold">Build Your Brand:</span> Set up a unique business profile, connect with customers, and engage with them through reviews, posts, and special offers.</li>
+                        <li><span class="light-orange font-semibold">Transparent Transactions:</span> Track sales and customer interactions with complete transparency. We use Nostr keys to maintain privacy while providing valuable insights.</li>
+                    </ul>
+                </div>
+
+                <!-- Why Choose Lux Section -->
+                <div class="bg-gray-800 bg-opacity-80 rounded-lg p-6 border border-gray-700">
+                    <h3 class="text-2xl font-light text-violet-200 mb-4">Why Choose Lux?</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><span class="light-orange font-semibold">Seamless Transactions:</span> Pay effortlessly with QR codes or NFC, directly through the app.</li>
+                        <li><span class="light-orange font-semibold">Better Rewards:</span> Enjoy higher cashback rates and more personalized offers compared to traditional methods.</li>
+                        <li><span class="light-orange font-semibold">Support Local:</span> Directly contribute to your local community by supporting small businesses and keeping money within your neighborhood.</li>
+                        <li><span class="light-orange font-semibold">Privacy & Security:</span> Experience top-notch privacy and security with Bitcoin and Nostr technology.</li>
+                        <li><span class="light-orange font-semibold">Growing Network:</span> As Lux scales, you'll gain access to an ever-expanding network of local users, increasing your reach and impact.</li>
+                    </ul>
+                </div>
+
+                <!-- Local Businesses Section -->
+                <div class="bg-gray-800 bg-opacity-80 rounded-lg p-6 border border-gray-700">
+                    <h3 class="text-2xl font-light text-violet-200 mb-4">Here's a sneak peek at some local businesses near you (Santa Monica) that will be part of Lux once we launch:</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-gray-700 rounded-lg p-4 flex items-center">
+                            <!-- TODO: Replace with actual image of Logic Workout Classes -->
+                            <img src="path/to/logic-workout-image.jpg" alt="Logic Workout Classes" class="rounded-lg mr-4" style="width: 150px; height: 150px; object-fit: cover;">
+                            <div>
+                                <h4 class="text-xl font-semibold text-violet-200">Logic Workout Classes</h4>
+                                <p class="mb-2">Enjoy <strong>15% cashback</strong> on in-person group training sessions.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-700 rounded-lg p-4 flex items-center">
+                            <!-- TODO: Replace with actual image of Sogno Toscano Cafe -->
+                            <img src="path/to/sogno-toscano-image.jpg" alt="Sogno Toscano Cafe and Wine Bar" class="rounded-lg mr-4" style="width: 150px; height: 150px; object-fit: cover;">
+                            <div>
+                                <h4 class="text-xl font-semibold text-violet-200">Sogno Toscano Cafe and Wine Bar</h4>
+                                <p class="mb-2">Get <strong>20% cashback</strong> on all purchases.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="font-semibold text-lg text-center">
+                    We're launching soon. Don't miss out—sign up for the <a href="#" onclick="showTab('signup')" class="text-violet-200 hover:text-violet-100 transition duration-300">waitlist</a> now and be among the first to benefit from these amazing offers and more!
                 </p>
-                <div class="screenshots">
-                    <img src="luxphoto1.png" alt="Lux Mobile App Screenshot 1" class="app-screenshot border-purple">
-                    <img src="luxphoto2.png" alt="Lux Mobile App Screenshot 2" class="app-screenshot border-orange">
+
+                <div class="mt-8 flex justify-around">
+                    <!-- TODO: Replace with actual app screenshots -->
+                    <img src="path/to/app-screenshot-1.jpg" alt="Lux Mobile App Screenshot 1" class="rounded-lg border border-violet-200" style="max-width: 250px; height: auto;">
+                    <img src="path/to/app-screenshot-2.jpg" alt="Lux Mobile App Screenshot 2" class="rounded-lg border border-gray-600" style="max-width: 250px; height: auto;">
                 </div>
             </div>
             
-            <div id="signup" class="tab-content">
-                <h2>Join the Waitlist</h2>
-                <form action="https://formspree.io/f/mjkbdplb" method="POST">
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
+            <div id="signup" class="hidden bg-gray-800 bg-opacity-80 rounded-lg p-6 border border-gray-700">
+                <h2 class="text-3xl font-light text-center mb-6 gradient-text">Join the Waitlist</h2>
+                <!-- TODO: Replace 'your_formspree_id' with your actual Formspree endpoint -->
+                <form action="https://formspree.io/f/your_formspree_id" method="POST" class="max-w-md mx-auto">
+                    <div class="mb-4">
+                        <label for="email" class="block mb-2">Email:</label>
+                        <input type="email" id="email" name="email" required class="w-full px-3 py-2 bg-gray-700 rounded text-white">
                     </div>
-                    <div>
-                        <p>I'm interested in joining as a:</p>
-                        <label>
-                            <input type="radio" name="accountType" value="customer" required>
-                            Customer
-                        </label>
-                        <label>
-                            <input type="radio" name="accountType" value="merchant" required>
-                            Merchant
-                        </label>
+                    <div class="mb-4">
+                        <p class="mb-2">I'm interested in joining as a:</p>
+                        <div class="flex space-x-4">
+                            <label class="flex items-center">
+                                <input type="radio" name="accountType" value="customer" required class="mr-2">
+                                Customer
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="accountType" value="merchant" required class="mr-2">
+                                Merchant
+                            </label>
+                        </div>
                     </div>
-                    <button type="submit">Join Waitlist</button>
+                    <button type="submit" class="w-full bg-violet-200 text-gray-900 py-2 px-4 rounded hover:bg-violet-300 transition duration-300">
+                        Join Waitlist
+                    </button>
                 </form>
             </div>
             
-            <div id="contact" class="tab-content">
-                <h2>Contact Us</h2>
-                <p>
-                    Reach out, send us an email at <a href="mailto:tina@lux-ln.com" style="color: #f97316; transition: color 0.3s;">tina@lux-ln.com</a>
+            <div id="contact" class="hidden bg-gray-800 bg-opacity-80 rounded-lg p-6 border border-gray-700">
+                <h2 class="text-3xl font-light text-center mb-6 gradient-text">Contact Us</h2>
+                <p class="text-center text-lg">
+                    Reach out, send us an email at <a href="mailto:tina@lux-ln.com" class="text-violet-200 hover:text-violet-100 transition duration-300">tina@lux-ln.com</a>
                 </p>
             </div>
         </main>
-        <footer>
+        <footer class="bg-gray-900 bg-opacity-80 text-white text-center py-4 mt-8">
             <p>&copy; 2024 Lux. All rights reserved.</p>
         </footer>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabButtons = document.querySelectorAll('.tab-button');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            function setActiveTab(tabId) {
-                tabButtons.forEach(button => {
-                    if (button.getAttribute('data-tab') === tabId) {
-                        button.classList.add('active');
-                    } else {
-                        button.classList.remove('active');
-                    }
-                });
-
-                tabContents.forEach(content => {
-                    if (content.id === tabId) {
-                        content.classList.add('active');
-                    } else {
-                        content.classList.remove('active');
-                    }
-                });
-            }
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const tabId = this.getAttribute('data-tab');
-                    setActiveTab(tabId);
-                });
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('main > div').forEach(tab => tab.classList.add('hidden'));
+            // Show the selected tab
+            document.getElementById(tabName).classList.remove('hidden');
+            // Update active state in navigation
+            document.querySelectorAll('nav button').forEach(button => {
+                if (button.textContent.toLowerCase() === tabName) {
+                    button.classList.add('text-white');
+                    button.classList.remove('text-gray-400');
+                } else {
+                    button.classList.remove('text-white');
+                    button.classList.add('text-gray-400');
+                }
             });
-        });
+        }
     </script>
 </body>
 </html>
