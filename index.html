@@ -10,7 +10,7 @@
     font-family: 'Helvetica Neue', Arial, sans-serif;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('prism.jpeg');
     background-size: cover;
-    background-position: center 80%; /* This raises the background image */
+    background-position: center 96%; /* This raises the background image */
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -37,14 +37,25 @@
 </head>
 <body class="bg-black bg-opacity-80 text-white">
     <div class="min-h-screen flex flex-col">
-        <header class="bg-gray-900 bg-opacity-80 text-white text-center py-4">
-            <h1 class="text-4xl font-light flex items-center justify-center">
-                Lux
-                <svg class="w-8 h-8 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13 10V3L4 14H11V21L20 10H13Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </h1>
-        </header>
+<header class="bg-gray-900 bg-opacity-80 text-white text-center py-4">
+    <h1 class="text-4xl font-light flex items-center justify-center">
+        Lux
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
+            <defs>
+                <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ff0000"/>
+                    <stop offset="16.67%" style="stop-color:#ff8000"/>
+                    <stop offset="33.33%" style="stop-color:#ffff00"/>
+                    <stop offset="50%" style="stop-color:#00ff00"/>
+                    <stop offset="66.67%" style="stop-color:#0000ff"/>
+                    <stop offset="83.33%" style="stop-color:#8000ff"/>
+                    <stop offset="100%" style="stop-color:#ff00ff"/>
+                </linearGradient>
+            </defs>
+            <path d="M13 3L4 14H11L9 21L20 9H13L15 3H13Z" stroke="url(#rainbow)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </h1>
+</header>
         <nav class="bg-gray-800 bg-opacity-80 py-2">
             <ul class="flex justify-center space-x-4">
                 <li><button class="text-white hover:text-gray-200 transition duration-300" onclick="showTab('about')">About</button></li>
@@ -61,8 +72,8 @@
                 <div class="bg-gray-800 bg-opacity-80 rounded-lg p-6 border border-gray-700">
                     <h3 class="text-2xl font-light text-violet-200 mb-4">For Customers:</h3>
                     <ul class="list-disc pl-6 space-y-2">
-                        <li><span class="light-orange font-semibold">Support Your Community:</span> Use Lux to shop and eat locally, directly supporting small businesses and boosting your local economy.</li>
-                        <li><span class="light-orange font-semibold">Earn Cash Back & More:</span> Get instant cash back on your purchases, with the option to receive rewards in Bitcoin or stablecoins.</li>
+                        <li><span class="light-orange font-semibold">Support Your Community:</span> Use Lux to shop and eat locally, directly supporting small, local businesses.</li>
+                        <li><span class="light-orange font-semibold">Earn Cash Back & More:</span> Get instant cash back on your purchases, with the option to receive rewards in dollars or Bitcoin.</li>
                         <li><span class="light-orange font-semibold">Privacy First:</span> Enjoy transactions with complete privacy. We use secure, anonymous Nostr keys, so your location and personal data remain private.</li>
                         <li><span class="light-orange font-semibold">No Credit Card Fees:</span> By using the Bitcoin Lightning Network, we eliminate traditional credit card fees, allowing more of your rewards to stay in your pocket.</li>
                         <li><span class="light-orange font-semibold">Engage & Reward:</span> Create your unique profile, interact with merchants, leave reviews, and follow your favorite local spots. Stream money directly to businesses or friends as you please.</li>
@@ -74,7 +85,7 @@
                 <div class="bg-gray-800 bg-opacity-80 rounded-lg p-6 border border-gray-700">
                     <h3 class="text-2xl font-light text-violet-200 mb-4">For Merchants:</h3>
                     <ul class="list-disc pl-6 space-y-2">
-                        <li><span class="light-orange font-semibold">Boost Your Business:</span> Attract more customers by offering cashback rewards and exclusive incentives directly through the app.</li>
+                        <li><span class="light-orange font-semibold">Boost Your Business:</span> Attract more customers by offering flexible cashback rewards and exclusive incentives directly through the app.</li>
                         <li><span class="light-orange font-semibold">Save on Fees:</span> Instead of paying traditional credit card or bank fees, use that money to offer cashback directly to your customers. This not only eliminates middlemen but also acts as a powerful marketing tool, enhancing your visibility in the app. For instance, if you'd typically pay a 3% fee to banks, you can instead offer that 3% as cashback, driving more traffic and sales to your business.</li>
                         <li><span class="light-orange font-semibold">Flexible Promotions:</span> Tailor your rewards based on your business needs. Offer higher cashback on slower days to boost demand or adjust promotions based on peak times. This flexibility lets you respond dynamically to your business environment.</li>
                         <li><span class="light-orange font-semibold">Build Your Brand:</span> Set up a unique business profile, connect with customers, and engage with them through reviews, posts, and special offers.</li>
