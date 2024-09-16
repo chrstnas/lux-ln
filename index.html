@@ -7,13 +7,23 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            /* TODO: Add your background image here */
-            background-image: url('prism.jpeg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('prism.jpeg');
+    background-size: cover;
+    background-position: center 30%; /* This raises the background image */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* Ensure text remains readable */
+.bg-gray-800 {
+    background-color: rgba(31, 41, 55, 0.8); /* semi-transparent dark background */
+}
+
+.bg-gray-900 {
+    background-color: rgba(17, 24, 39, 0.8); /* semi-transparent darker background for header/footer */
+}
+    
         .light-orange {
             color: #ffc3a0;
         }
