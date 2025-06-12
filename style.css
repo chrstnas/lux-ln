@@ -118,3 +118,12 @@ footer {
     text-align: center;
     margin-top: 20px;
 }
+
+.waitlist-link {
+    color: #8b5cf6; /* You can adjust the color code to your preferred shade of violet */
+    text-decoration: none;
+}
+
+.waitlist-link:hover {
+    text-decoration: underline;
+}
