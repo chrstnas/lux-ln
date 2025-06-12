@@ -1,207 +1,27 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.min-h-screen {
-    min-height: 100vh;
-}
-
-.flex {
-    display: flex;
-}
-
-.flex-col {
-    flex-direction: column;
-}
-
-.bg-black {
-    background-color: #000;
-}
-
-.text-white {
-    color: #fff;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('prism.jpeg');
+    background-size: cover;
+    background-position: center 69%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .bg-gray-900 {
-    background-color: #1a202c;
+    background-color: rgba(31, 41, 55, 0.8);
 }
 
 .bg-gray-800 {
-    background-color: #2d3748;
+    background-color: rgba(45, 55, 72, 0.8);
 }
 
-.text-center {
-    text-align: center;
-}
-
-.py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-
-.py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-.text-4xl {
-    font-size: 2.25rem;
-}
-
-.font-bold {
-    font-weight: bold;
+.light-orange {
+    color: #ffc3a0;
 }
 
 .gradient-text {
-    background-image: linear-gradient(to right, #f97316, #9333ea);
+    background-image: linear-gradient(to right, #ddd6fe, #a78bfa);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.space-x-4 > * + * {
-    margin-left: 1rem;
-}
-
-.flex-grow {
-    flex-grow: 1;
-}
-
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.py-8 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.text-3xl {
-    font-size: 1.875rem;
-}
-
-.mb-4 {
-    margin-bottom: 1rem;
-}
-
-.text-lg {
-    font-size: 1.125rem;
-}
-
-.mb-6 {
-    margin-bottom: 1.5rem;
-}
-
-.justify-around {
-    justify-content: space-around;
-}
-
-.mt-8 {
-    margin-top: 2rem;
-}
-
-.app-screenshot {
-    max-width: 250px;
-    height: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.border-purple {
-    border: 2px solid #9333ea;
-}
-
-.border-orange {
-    border: 2px solid #f97316;
-}
-
-.max-w-md {
-    max-width: 28rem;
-}
-
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.w-full {
-    width: 100%;
-}
-
-.px-3 {
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-}
-
-.py-2 {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-}
-
-.rounded {
-    border-radius: 0.25rem;
-}
-
-.mr-2 {
-    margin-right: 0.5rem;
-}
-
-.gradient-bg {
-    background-image: linear-gradient(to right, #f97316, #9333ea);
-}
-
-.hover-gradient:hover {
-    background-image: linear-gradient(to right, #ea580c, #7e22ce);
-}
-
-.transition {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-    transition-duration: 300ms;
-}
-
-.hidden {
-    display: none;
-}
-
-.tab-button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: color 0.3s;
-}
-
-.tab-button:hover, .tab-button.active {
-    color: #f97316;
-}
-
-@media (max-width: 768px) {
-    .flex {
-        flex-direction: column;
-    }
-    
-    .space-x-4 > * + * {
-        margin-left: 0;
-        margin-top: 1rem;
-    }
-    
-    .app-screenshot {
-        max-width: 80%;
-        margin-bottom: 1rem;
-    }
 }
