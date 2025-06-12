@@ -1,14 +1,23 @@
-function showTab(tabName) {
-    // Hide all tabs
-    document.querySelectorAll('main > div').forEach(tab => tab.classList.add('hidden'));
-    // Show the selected tab
-    document.getElementById(tabName).classList.remove('hidden');
-    // Update active state in navigation
-    document.querySelectorAll('nav button').forEach(button => {
-        if (button.textContent.toLowerCase() === tabName) {
-            button.classList.add('active');
-        } else {
-            button.classList.remove('active');
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const sections = document.querySelectorAll('main section');
+
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = this.getAttribute('href');
+            
+            navLinks.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            
+            this.classList.add('active');
+            
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+            
+            document.querySelector(target).classList.add('active');
+        });
     });
-}
+});
