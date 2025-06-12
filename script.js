@@ -21,3 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+function showTab(tabName) {
+    // Hide all tabs
+    document.querySelectorAll('main > section').forEach(tab => tab.classList.remove('active'));
+    // Show the selected tab
+    document.getElementById(tabName).classList.add('active');
+    // Update active state in navigation
+    document.querySelectorAll('nav a').forEach(link => {
+        if (link.getAttribute('href') === `#${tabName}`) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+function showSignupTab() {
+    showTab('signup');
+}
