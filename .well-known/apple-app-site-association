@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "MQPNG39UTN.com.tinas.lux",
+        "paths": [ "/wallet/*", "/rewards/*" ]
+      }
+    ]
+  }
+}
