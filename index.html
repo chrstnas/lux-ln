@@ -3,90 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lux - Lightning Payments Made Easy</title>
+    <title>Lux: rewards that pay for themselves, for local shops</title>
+    <meta name="description" content="Lux lets customers tap to pay at independent shops on cheaper rails, and turns the fees a shop saves into rewards that run on autopilot.">
+    <meta property="og:title" content="Lux: rewards that pay for themselves">
+    <meta property="og:description" content="Cheaper payments and autopilot rewards for independent shops. Tap to pay, earn more in quiet hours, and keep the shop under what cards cost.">
+    <meta property="og:image" content="https://lux-ln.com/img/c-home.jpg">
+    <meta property="og:url" content="https://lux-ln.com/">
+    <meta name="theme-color" content="#0b0b10">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>LUX
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ml-2">
-                    <defs>
-                        <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#ff0000"/>
-                            <stop offset="16.67%" style="stop-color:#ff8000"/>
-                            <stop offset="33.33%" style="stop-color:#ffff00"/>
-                            <stop offset="50%" style="stop-color:#00ff00"/>
-                            <stop offset="66.67%" style="stop-color:#0000ff"/>
-                            <stop offset="83.33%" style="stop-color:#8000ff"/>
-                            <stop offset="100%" style="stop-color:#ff00ff"/>
-                        </linearGradient>
-                    </defs>
-                    <path d="M13 3L4 14H11L9 21L20 9H13L15 3H13Z" stroke="url(#rainbow)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </h1>
-        </header>
+    <header class="topbar">
+        <a class="brand" href="#top" aria-label="Lux home">
+            LUX
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <defs>
+                    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#ff453a"/>
+                        <stop offset="20%" stop-color="#ff9f0a"/>
+                        <stop offset="40%" stop-color="#ffd60a"/>
+                        <stop offset="60%" stop-color="#30d158"/>
+                        <stop offset="80%" stop-color="#0a84ff"/>
+                        <stop offset="100%" stop-color="#bf5af2"/>
+                    </linearGradient>
+                </defs>
+                <path d="M13 3L4 14H11L9 21L20 9H13L15 3H13Z" stroke="url(#rainbow)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
         <nav>
-            <ul>
-                <li><a href="#about" class="active">About</a></li>
-                <li><a href="#signup">Sign Up</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#shops">For shops</a>
+            <a href="#customers">For customers</a>
+            <a class="nav-cta" href="#join">Join</a>
         </nav>
-        <main>
-            <section id="about" class="active">
-                <h2>Lightning Payments Made Easy</h2>
-                <p>Lux is a cutting-edge payment app that makes it simple for customers to pay with Bitcoin's Lightning Network at their favorite local shops. With Lux, you can enjoy instant, low-fee transactions and earn dynamic rewards on every purchase!</p>
-                <h3>Key Features:</h3>
-                <ul>
-                    <li>Tap to pay instantly with Lightning or traditional payments</li>
-                    <li>Earn up to 11% cashback, automatically boosted for Lightning payments</li>
-                    <li>Discover local merchants and their live reward rates on the map</li>
-                    <li>Spin the wheel after purchases for a chance to win even more sats back!</li>
-                </ul>
-                <h3>Benefits for Merchants:</h3>
-                <ul>
-                    <li>Save on transaction fees and offer automated loyalty programs</li>
-                    <li>Attract new customers with Bitcoin and traditional payment options</li>
-                    <li>Powerful tools to grow your business and adapt to local trends</li>
-                </ul>
-                <p>Sign up for the <a href="#" class="waitlist-link" onclick="showSignupTab()">waitlist</a> now and be among the first to experience the future of payments!</p>
-                <div class="app-screenshots">
-                    <img src="luxphoto1.png" alt="Lux Mobile App Screenshot 1">
-                    <img src="luxphoto2.png" alt="Lux Mobile App Screenshot 2">
-                    <img src="luxphoto3.png" alt="Lux Mobile App Screenshot 3">
+    </header>
+
+    <main id="top">
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">For independent shops</p>
+                <h1>Card fees, turned into <span class="rainbow-text">loyal customers</span>.</h1>
+                <p class="lede">Small shops lose about 5% of every small card sale to fees and get nothing back. Lux moves payments onto cheaper rails and turns what the shop saves into rewards, set automatically hour by hour, so the shop stays under what cards would have cost.</p>
+                <div class="hero-actions">
+                    <a class="button primary" href="#join">Bring Lux to your shop</a>
+                    <a class="button ghost" href="#how">How it works</a>
                 </div>
-            </section>
-            <section id="signup">
-                <h2>Join the Waitlist</h2>
-                <form action="https://formspree.io/f/mjkbdplb" method="POST">
-                    <div>
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div>
-                        <p>I'm interested in joining as a:</p>
-                        <label>
-                            <input type="radio" name="accountType" value="customer" required>
-                            Customer
-                        </label>
-                        <label>
-                            <input type="radio" name="accountType" value="merchant" required>
-                            Merchant
-                        </label>
-                    </div>
-                    <button type="submit">Join Waitlist</button>
-                </form>
-            </section>
-            <section id="contact">
-                <h2>Contact Us</h2>
-                <p>Reach out, send us an email at <a href="mailto:tina@lux-ln.com">tina@lux-ln.com</a></p>
-            </section>
-        </main>
-        <footer>
-            <p>&copy; 2025 Lux</p>
-        </footer>
-    </div>
-    <script src="script.js"></script>
+                <p class="proof">Piloted with 10 Santa Monica shops. Every one asked to keep it.</p>
+            </div>
+            <div class="hero-phone">
+                <img class="phone" src="img/c-home.jpg" alt="The Lux app: this week's spending, points, a tap button and the best reward rates nearby" width="570" height="1240">
+            </div>
+        </section>
+
+        <div class="spectrum" aria-hidden="true">
+            <span style="--c:#ff453a"></span><span style="--c:#ff9f0a"></span><span style="--c:#ffd60a"></span><span style="--c:#30d158"></span><span style="--c:#0a84ff"></span><span style="--c:#5e5ce6"></span><span style="--c:#bf5af2"></span>
+        </div>
+
+        <section id="how" class="how">
+            <h2>How it works</h2>
+            <ol class="steps">
+                <li>
+                    <span class="step-num">1</span>
+                    <h3>Tap at the counter</h3>
+                    <p>Customers tap their phone on a Lux chip by the register. No new hardware, nothing new for staff to learn.</p>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <h3>Pay on a cheaper rail</h3>
+                    <p>A week of taps rolls into one bank payment, or settles instantly over Lightning. Either way the shop pays a fraction of card cost.</p>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <h3>Savings come back as rewards</h3>
+                    <p>Every hour each shop shows a color, from red (1% back) to violet (10% back). Quiet hours glow brighter, so customers come when the shop needs them.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="shops" class="feature">
+            <div class="feature-copy">
+                <p class="eyebrow">For shops</p>
+                <h2>Rewards that run themselves.</h2>
+                <p>Owners told us the same thing: they want loyal regulars, but they don't have time to run a loyalty program. So Lux runs it on autopilot.</p>
+                <ul class="checks">
+                    <li><strong>Smart reward hours.</strong> Lux learns your shop's rhythm from visits, time of day and weather. It raises rewards when it's quiet and lowers them when you're packed.</li>
+                    <li><strong>Stays under card cost.</strong> Rewards plus our fee are kept at or below what a card terminal would have charged you.</li>
+                    <li><strong>One payout every Friday.</strong> A plain statement shows what you paid next to what cards would have cost, and how many visits came in during boosted hours.</li>
+                    <li><strong>Stamp programs and Lightning Boost.</strong> Keep your stamp card, now digital, and take bitcoin straight to your own wallet if you want to.</li>
+                    <li><strong>Works with Square.</strong> Lux reads the order total from your Square register automatically.</li>
+                </ul>
+            </div>
+            <div class="feature-phone">
+                <img class="phone" src="img/m-home.jpg" alt="The Lux shop dashboard: today's reward colors, a Busy right now check, and this week's visits, first-timers and rewards funded" width="570" height="1240" loading="lazy">
+            </div>
+        </section>
+
+        <section id="customers" class="feature reverse">
+            <div class="feature-copy">
+                <p class="eyebrow">For customers</p>
+                <h2>Light up your neighborhood.</h2>
+                <p>Every local shop shows a color, and the color is your reward. Tap to pay, earn points, and fill your ring as you discover the shops on your street.</p>
+                <ul class="checks">
+                    <li><strong>Earn more in quiet hours.</strong> See the best rates near you right now.</li>
+                    <li><strong>One simple weekly payment.</strong> Your taps add up to a single bank payment each week.</li>
+                    <li><strong>Share your top 3.</strong> Follow friends, see where they go, and save the spots they love.</li>
+                </ul>
+            </div>
+            <div class="feature-phone">
+                <img class="phone" src="img/c-profile.jpg" alt="A Lux customer profile: a color ring, a street of lit-up shops, points, places, badges and posts" width="570" height="1240" loading="lazy">
+            </div>
+        </section>
+
+        <section class="local">
+            <h2>Built block by block.</h2>
+            <p>We're starting in Santa Monica, where hundreds of independent cafes, studios and restaurants line walkable streets. Every new shop on a block makes Lux more useful to everyone on it.</p>
+        </section>
+
+        <section id="join" class="join">
+            <h2>Join Lux</h2>
+            <p>Own a shop, or want Lux at your favorite one? Leave your email and we'll be in touch.</p>
+            <form action="https://formspree.io/f/mjkbdplb" method="POST">
+                <label class="field">
+                    <span>Email</span>
+                    <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                </label>
+                <fieldset class="choice">
+                    <legend>I'm a</legend>
+                    <label><input type="radio" name="accountType" value="merchant" required> Shop owner</label>
+                    <label><input type="radio" name="accountType" value="customer" required> Customer</label>
+                </fieldset>
+                <label class="field">
+                    <span>Shop name <em>(optional)</em></span>
+                    <input type="text" name="shop" autocomplete="organization">
+                </label>
+                <button class="button primary" type="submit">Join Lux</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="mailto:tina@lux-ln.com">tina@lux-ln.com</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></p>
+        <p class="fine">&copy; 2026 Lux</p>
+    </footer>
 </body>
 </html>
