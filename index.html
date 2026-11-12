@@ -3,146 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lux: rewards that pay for themselves, for local shops</title>
-    <meta name="description" content="Lux lets customers tap to pay at independent shops on cheaper rails, and turns the fees a shop saves into rewards that run on autopilot.">
-    <meta property="og:title" content="Lux: rewards that pay for themselves">
-    <meta property="og:description" content="Cheaper payments and autopilot rewards for independent shops. Tap to pay, earn more in quiet hours, and keep the shop under what cards cost.">
-    <meta property="og:image" content="https://lux-ln.com/img/c-home.jpg">
+    <title>Lux · Light up your neighborhood</title>
+    <meta name="description" content="Lux is tap-to-pay rewards for independent shops. Payments move onto cheaper rails, and what the shop saves on card fees comes back to its customers as rewards, set hour by hour.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lux · Light up your neighborhood">
+    <meta property="og:description" content="Tap-to-pay rewards that keep money, and life, on your block.">
+    <meta property="og:image" content="https://lux-ln.com/img/tap.jpg">
     <meta property="og:url" content="https://lux-ln.com/">
-    <meta name="theme-color" content="#0b0b10">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#13151F">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..700&family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="topbar">
-        <a class="brand" href="#top" aria-label="Lux home">
-            LUX
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <defs>
-                    <linearGradient id="rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#ff453a"/>
-                        <stop offset="20%" stop-color="#ff9f0a"/>
-                        <stop offset="40%" stop-color="#ffd60a"/>
-                        <stop offset="60%" stop-color="#30d158"/>
-                        <stop offset="80%" stop-color="#0a84ff"/>
-                        <stop offset="100%" stop-color="#bf5af2"/>
-                    </linearGradient>
-                </defs>
-                <path d="M13 3L4 14H11L9 21L20 9H13L15 3H13Z" stroke="url(#rainbow)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
+        <a class="brand" href="#top" aria-label="Lux, back to top">
+            <img class="brand-mark" src="img/mark.svg" alt="" width="30" height="30">
+            <span class="brand-word">Lux</span>
         </a>
-        <nav>
+        <nav aria-label="Main">
+            <a href="#how">How it works</a>
             <a href="#shops">For shops</a>
-            <a href="#customers">For customers</a>
+            <a href="#vision">Vision</a>
             <a class="nav-cta" href="#join">Join</a>
         </nav>
     </header>
 
     <main id="top">
-        <section class="hero">
-            <div class="hero-copy">
-                <p class="eyebrow">For independent shops</p>
-                <h1>Card fees, turned into <span class="rainbow-text">loyal customers</span>.</h1>
-                <p class="lede">Small shops lose about 5% of every small card sale to fees and get nothing back. Lux moves payments onto cheaper rails and turns what the shop saves into rewards, set automatically hour by hour, so the shop stays under what cards would have cost.</p>
-                <div class="hero-actions">
-                    <a class="button primary" href="#join">Bring Lux to your shop</a>
-                    <a class="button ghost" href="#how">How it works</a>
+
+        <!-- Hero -->
+        <section class="hero night">
+            <div class="hero-photo" aria-hidden="true"></div>
+            <div class="wrap hero-copy">
+                <p class="eyebrow">Tap-to-pay rewards for independent shops</p>
+                <h1>Light up your neighborhood.</h1>
+                <p class="lede">Customers tap to pay at the shops on their block. Lux moves the payment onto cheaper rails and turns what the shop saves on card fees into rewards that bring them back.</p>
+                <div class="actions">
+                    <a class="button amber" href="#join">Bring Lux to your shop</a>
+                    <a class="button ghost" href="#demo">Watch the demo</a>
                 </div>
-                <p class="proof">Piloted with 10 Santa Monica shops. Every one asked to keep it.</p>
-            </div>
-            <div class="hero-phone">
-                <img class="phone" src="img/c-home.jpg" alt="The Lux app: this week's spending, points, a tap button and the best reward rates nearby" width="570" height="1240">
+                <p class="proof">Piloted with 10 independent shops in Santa Monica. Every one asked to keep it.</p>
             </div>
         </section>
 
-        <div class="spectrum" aria-hidden="true">
-            <span style="--c:#ff453a"></span><span style="--c:#ff9f0a"></span><span style="--c:#ffd60a"></span><span style="--c:#30d158"></span><span style="--c:#0a84ff"></span><span style="--c:#5e5ce6"></span><span style="--c:#bf5af2"></span>
-        </div>
-
-        <section id="how" class="how">
-            <h2>How it works</h2>
-            <ol class="steps">
-                <li>
-                    <span class="step-num">1</span>
-                    <h3>Tap at the counter</h3>
-                    <p>Customers tap their phone on a Lux chip by the register. No new hardware, nothing new for staff to learn.</p>
-                </li>
-                <li>
-                    <span class="step-num">2</span>
-                    <h3>Pay on a cheaper rail</h3>
-                    <p>A week of taps rolls into one bank payment, or settles instantly over Lightning. Either way the shop pays a fraction of card cost.</p>
-                </li>
-                <li>
-                    <span class="step-num">3</span>
-                    <h3>Savings come back as rewards</h3>
-                    <p>Every hour each shop shows a color, from red (1% back) to violet (10% back). Quiet hours glow brighter, so customers come when the shop needs them.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section id="shops" class="feature">
-            <div class="feature-copy">
-                <p class="eyebrow">For shops</p>
-                <h2>Rewards that run themselves.</h2>
-                <p>Owners told us the same thing: they want loyal regulars, but they don't have time to run a loyalty program. So Lux runs it on autopilot.</p>
-                <ul class="checks">
-                    <li><strong>Smart reward hours.</strong> Lux learns your shop's rhythm from visits, time of day and weather. It raises rewards when it's quiet and lowers them when you're packed.</li>
-                    <li><strong>Stays under card cost.</strong> Rewards plus our fee are kept at or below what a card terminal would have charged you.</li>
-                    <li><strong>One payout every Friday.</strong> A plain statement shows what you paid next to what cards would have cost, and how many visits came in during boosted hours.</li>
-                    <li><strong>Stamp programs and Lightning Boost.</strong> Keep your stamp card, now digital, and take bitcoin straight to your own wallet if you want to.</li>
-                    <li><strong>Works with Square.</strong> Lux reads the order total from your Square register automatically.</li>
-                </ul>
-            </div>
-            <div class="feature-phone">
-                <img class="phone" src="img/m-home.jpg" alt="The Lux shop dashboard: today's reward colors, a Busy right now check, and this week's visits, first-timers and rewards funded" width="570" height="1240" loading="lazy">
+        <!-- How it works -->
+        <section id="how" class="paper">
+            <div class="wrap split">
+                <div>
+                    <p class="eyebrow">How it works</p>
+                    <h2>Tap. Pay. Get money back at the shops you love.</h2>
+                    <ol class="steps">
+                        <li><span class="num">1</span><div><h3>Tap at the counter</h3><p>A small chip sits by the register. Customers tap their phone and they're done. Nothing at the counter gets replaced, and there's nothing new for staff to learn.</p></div></li>
+                        <li><span class="num">2</span><div><h3>Every shop glows a color</h3><p>Each hour a shop shows a color, from red (1% back) to violet (up to 10%). Quiet hours glow brightest. Paying with Lightning adds one more color.</p></div></li>
+                        <li><span class="num">3</span><div><h3>Light up your map</h3><p>Every visit fills in your own map of the neighborhood, color by color, as you find the places on your street.</p></div></li>
+                    </ol>
+                    <div class="scale" role="img" aria-label="The reward scale: red is 1% back, rising through orange, yellow, green, blue and indigo to violet at 7 to 11% back">
+                        <div class="scale-bar"><i style="--c:#E5484D"></i><i style="--c:#F2853A"></i><i style="--c:#F5C542"></i><i style="--c:#46B977"></i><i style="--c:#3E8EF0"></i><i style="--c:#5B5BD6"></i><i class="violet" style="--c:#9B5DE5"></i></div>
+                        <div class="scale-labels"><span>Red · 1% back</span><span>Violet · 7–11% back</span></div>
+                    </div>
+                </div>
+                <div class="phones">
+                    <img class="phone" src="img/shop.jpg" alt="A shop page in Lux, showing the shop's color and reward right now" width="476" height="1060" loading="lazy">
+                    <img class="phone offset" src="img/passport.jpg" alt="A customer's neighborhood map in Lux, with the shops they have visited lit up" width="496" height="1060" loading="lazy">
+                </div>
             </div>
         </section>
 
-        <section id="customers" class="feature reverse">
-            <div class="feature-copy">
-                <p class="eyebrow">For customers</p>
-                <h2>Light up your neighborhood.</h2>
-                <p>Every local shop shows a color, and the color is your reward. Tap to pay, earn points, and fill your ring as you discover the shops on your street.</p>
-                <ul class="checks">
-                    <li><strong>Earn more in quiet hours.</strong> See the best rates near you right now.</li>
-                    <li><strong>One simple weekly payment.</strong> Your taps add up to a single bank payment each week.</li>
-                    <li><strong>Share your top 3.</strong> Follow friends, see where they go, and save the spots they love.</li>
-                </ul>
-            </div>
-            <div class="feature-phone">
-                <img class="phone" src="img/c-profile.jpg" alt="A Lux customer profile: a color ring, a street of lit-up shops, points, places, badges and posts" width="570" height="1240" loading="lazy">
+        <!-- The fee -->
+        <section class="amber-band">
+            <div class="wrap fee">
+                <p class="fee-num">5.9%</p>
+                <div>
+                    <h2>of a $10 coffee goes to card fees.</h2>
+                    <p>2.9% plus 30¢ comes to 59¢ on a $10 coffee. The corner café pays it on every small sale and gets nothing back. Lux turns that money into rewards that bring neighbors back.</p>
+                </div>
             </div>
         </section>
 
-        <section class="local">
-            <h2>Built block by block.</h2>
-            <p>We're starting in Santa Monica, where hundreds of independent cafes, studios and restaurants line walkable streets. Every new shop on a block makes Lux more useful to everyone on it.</p>
+        <!-- Lightning -->
+        <section class="night">
+            <div class="wrap">
+                <p class="eyebrow">Why Lightning</p>
+                <h2 class="narrow">Money that moves like a text message.</h2>
+                <div class="cards three">
+                    <div class="card dark"><h3>Instant</h3><p>Settles in seconds, not days.</p></div>
+                    <div class="card dark"><h3>Near-free</h3><p>Fractions of a cent per payment.</p></div>
+                    <div class="card dark"><h3>Open</h3><p>Works with any wallet. No gatekeeper.</p></div>
+                </div>
+                <p class="note">A Lightning payer pays the shop directly, and Lux never holds the money. The shop keeps the fee it saves and passes it on: Lightning payers see the shop one color higher. Not on Lightning? A customer's taps roll up into one bank payment a week, which also costs the shop far less than a card.</p>
+            </div>
         </section>
 
-        <section id="join" class="join">
-            <h2>Join Lux</h2>
-            <p>Own a shop, or want Lux at your favorite one? Leave your email and we'll be in touch.</p>
-            <form action="https://formspree.io/f/mjkbdplb" method="POST">
-                <label class="field">
-                    <span>Email</span>
-                    <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
-                </label>
-                <fieldset class="choice">
-                    <legend>I'm a</legend>
-                    <label><input type="radio" name="accountType" value="merchant" required> Shop owner</label>
-                    <label><input type="radio" name="accountType" value="customer" required> Customer</label>
-                </fieldset>
-                <label class="field">
-                    <span>Shop name <em>(optional)</em></span>
-                    <input type="text" name="shop" autocomplete="organization">
-                </label>
-                <button class="button primary" type="submit">Join Lux</button>
-            </form>
+        <!-- Autopilot -->
+        <section id="shops" class="paper">
+            <div class="wrap split">
+                <div>
+                    <p class="eyebrow">For shops</p>
+                    <h2>Every corner café gets its own revenue manager.</h2>
+                    <p class="body">Owners told us they love flexible rewards but don't have time to run them. So Lux runs them on autopilot. It sets each hour's reward from the shop's own rhythm: low in the rush, high when it's quiet. The whole month stays within what card fees would have cost.</p>
+                    <div class="day" role="img" aria-label="An example day: red during the 7am rush, rising to violet in the quiet mid-afternoon, then easing back in the evening">
+                        <div class="day-bar">
+                            <i style="--c:#E5484D"></i><i style="--c:#E5484D"></i><i style="--c:#F2853A"></i><i style="--c:#F5C542"></i><i style="--c:#F2853A"></i><i style="--c:#E5484D"></i><i style="--c:#F5C542"></i><i style="--c:#3E8EF0"></i><i style="--c:#9B5DE5"></i><i style="--c:#5B5BD6"></i><i style="--c:#46B977"></i><i style="--c:#F2853A"></i><i style="--c:#F5C542"></i><i style="--c:#46B977"></i><i style="--c:#3E8EF0"></i>
+                        </div>
+                        <div class="day-labels"><span>7am rush</span><span>quiet 3pm</span><span>9pm</span></div>
+                    </div>
+                    <ul class="checks">
+                        <li><strong>Learns.</strong> From each shop's visits and hours, plus weather, foot traffic and local events.</li>
+                        <li><strong>Asks.</strong> When it isn't sure, it checks with the counter: “Busy right now?” Every answer makes it smarter.</li>
+                        <li><strong>Owners lead.</strong> Pin the hours you already know. Autopilot fills the rest, and one tap overrides any hour.</li>
+                        <li><strong>Proves itself.</strong> Every statement shows what Lux cost next to what a card terminal would have charged.</li>
+                    </ul>
+                    <p class="pill">Autopilot is almost done. Owners can override any hour.</p>
+                </div>
+                <div class="phones">
+                    <img class="phone" src="img/busy.jpg" alt="The shop owner's home screen in Lux, asking the counter: Busy right now?" width="510" height="1080" loading="lazy">
+                    <img class="phone offset" src="img/statement.jpg" alt="A Lux statement comparing what the shop paid in fees and rewards with what its card terminal would have charged" width="510" height="1080" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Local -->
+        <section class="paper alt">
+            <div class="wrap">
+                <p class="eyebrow">Why local</p>
+                <h2 class="narrow">A street of independent shops is a neighborhood's immune system.</h2>
+                <p class="body narrow">Owners who know your name. Money that stays and circulates on the block. The corner spots that make a street feel like yours. Lux makes choosing them the easy, rewarding default, and it grows the way neighborhoods do.</p>
+                <ol class="growth">
+                    <li style="--c:#E5484D"><h3>One corridor</h3><p>A whole walkable street on Lux.</p></li>
+                    <li style="--c:#F5C542"><h3>The next one</h3><p>Neighbors bring their favorite shops on.</p></li>
+                    <li style="--c:#46B977"><h3>Nearby cities</h3><p>Venice, Culver City, and on.</p></li>
+                    <li style="--c:#3E8EF0"><h3>All of LA</h3><p>Hundreds of neighborhoods side by side.</p></li>
+                    <li style="--c:#9B5DE5"><h3>Every city</h3><p>The same playbook, block by block.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Vision -->
+        <section id="vision" class="night">
+            <div class="wrap split">
+                <div>
+                    <p class="eyebrow">Where we're going</p>
+                    <h2>Payments are the doorway. The neighborhood is the home.</h2>
+                    <p class="body">Lux is growing into the app for your neighborhood: where your city, your causes and your favorite local artists live, right next to the shops.</p>
+                    <div class="cards two">
+                        <div class="card dark"><h3>Your city, in plain words</h3><p>Short summaries of what the city council decided, written for the block you live on, and an easy way to have your say before the vote.</p></div>
+                        <div class="card dark"><h3>Volunteer and give</h3><p>The food bank needs three people on Saturday. The school garden needs mulch. Find it, sign up, show up.</p></div>
+                        <div class="card dark"><h3>Clean streets, real help</h3><p>Clear, current information on street cleaning and homelessness services: what's happening, who's helping, and how to pitch in.</p></div>
+                        <div class="card dark"><h3>Local creatives</h3><p>The singer at Thursday jazz night becomes your neighborhood's celebrity. Picked for quality, the way a good speakeasy is.</p></div>
+                    </div>
+                    <p class="note small">These come after shops love Lux. Today we're focused on payments and rewards.</p>
+                </div>
+                <div class="phones single">
+                    <img class="phone" src="img/local.jpg" alt="The Local feed in Lux: a small business spotlight from a bakery, and a neighbor's post about their morning order" width="476" height="1058" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo -->
+        <section id="demo" class="night deep">
+            <div class="wrap center">
+                <p class="eyebrow">See it in action</p>
+                <h2>Real payments, and the new app.</h2>
+                <div class="video">
+                    <video controls playsinline preload="none" poster="img/demo-poster.jpg">
+                        <source src="img/demo.mp4" type="video/mp4">
+                        Your browser can't play this video. <a href="img/demo.mp4">Download it here.</a>
+                    </video>
+                </div>
+                <p class="note small">A minute of highlights: a customer paying by tap at a brewery in our pilot, a Lightning payment, and the new app for customers and shops.</p>
+            </div>
+        </section>
+
+        <!-- Status -->
+        <section class="paper">
+            <div class="wrap">
+                <p class="eyebrow">Where we are</p>
+                <h2 class="narrow">Early, and building the foundations right.</h2>
+                <div class="cards three">
+                    <div class="card light" style="--c:#E5484D"><p class="tag">Learned</p><h3>A real pilot</h3><p>10 Santa Monica shops and about 150 customers paid by tap. Every shop asked to keep it. We paused to rebuild around what they taught us.</p></div>
+                    <div class="card light" style="--c:#F5C542"><p class="tag">Built</p><h3>A new app</h3><p>Weekly bank payments, shop pages, digital stamp cards and a full toolkit for shop owners, all tested end to end.</p></div>
+                    <div class="card light" style="--c:#46B977"><p class="tag">Next</p><h3>The relaunch</h3><p>Bringing our pilot shops back on one Santa Monica corridor, then the next. The new app reaches the App Store with the relaunch.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Join -->
+        <section id="join" class="night">
+            <div class="wrap join">
+                <div>
+                    <p class="eyebrow">Join us</p>
+                    <h2>Help light up your block.</h2>
+                    <p class="body">Own a shop, want Lux at your favorite one, or just want to follow along? Leave your email and we'll be in touch.</p>
+                </div>
+                <form id="join-form" action="https://formspree.io/f/mjkbdplb" method="POST">
+                    <input type="hidden" name="_subject" value="New sign-up from lux-ln.com">
+                    <label class="hp" aria-hidden="true">Leave this empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+                    <label class="field">
+                        <span>Email</span>
+                        <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                    </label>
+                    <fieldset class="choice">
+                        <legend>I'm a</legend>
+                        <label><input type="radio" name="accountType" value="merchant" required> Shop owner</label>
+                        <label><input type="radio" name="accountType" value="customer"> Customer</label>
+                        <label><input type="radio" name="accountType" value="supporter"> Friend or supporter</label>
+                    </fieldset>
+                    <label class="field">
+                        <span>Shop name <em>(optional)</em></span>
+                        <input type="text" name="shop" autocomplete="organization">
+                    </label>
+                    <button class="button amber" type="submit">Join Lux</button>
+                    <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p><a href="mailto:tina@lux-ln.com">tina@lux-ln.com</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></p>
-        <p class="fine">&copy; 2026 Lux</p>
+        <div class="wrap foot">
+            <span class="brand"><img class="brand-mark" src="img/mark.svg" alt="" width="26" height="26"><span class="brand-word">Lux</span></span>
+            <p><a href="mailto:tina@lux-ln.com">tina@lux-ln.com</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></p>
+            <p class="fine">&copy; 2026 Lux Lightning Inc.</p>
+        </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
